@@ -31,12 +31,14 @@ Ví dụ: “Dùng $chuyen-thuong-hieu-production để dựng video từ MP3 n�
 chuyen-thuong-hieu-production/
 ├── SKILL.md
 ├── agents/openai.yaml
-├── assets/                 Khung, logo, safe area và thông số/phiên âm
+├── assets/                 Khung, logo, safe area, nhạc nền và thông số/phiên âm
 ├── references/rendering.md
 ├── scripts/                ASR, căn từ, dựng và kiểm tra MP4
 └── requirements.txt
 ```
 
-Chuẩn bị MP3, tư liệu có nguồn, font đủ dấu Việt và đúng bản nhạc nền đang dùng. File nhạc ngoài được khai báo bằng `music.path`; gói public lưu thông số nhạc thay vì phân phối lại file đó. Cách cài thư viện và manifest dựng nằm trong `references/rendering.md` của gói.
+**Nhạc nền đã có trong gói ZIP** tại `assets/nhac-nen-blockbuster-trailer.m4a`. Có thể [tải riêng file nhạc tại đây](nhac-nen-blockbuster-trailer.m4a). Renderer tự dùng file kèm gói khi không khai báo `music.path`, lấy cao trào từ 00:48,08 và trộn ở gain −20 dB đến hết video.
+
+Chuẩn bị MP3, tư liệu có nguồn và font đủ dấu Việt. Cách cài thư viện và manifest dựng nằm trong `references/rendering.md` của gói.
 
 Kịch bản được duyệt, file giọng, video và tài khoản của từng dự án được quản lý trong thư mục làm việc riêng. Skill sử dụng khung/logo Chuyện Thương Hiệu đi kèm; public repository không tự cấp giấy phép đối với tư liệu bên thứ ba.

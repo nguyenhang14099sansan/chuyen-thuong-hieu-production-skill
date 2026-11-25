@@ -114,7 +114,7 @@ Chuẩn **1080×1920, 9:16, 30 fps**. Dùng nguyên khung/logo trong `assets/`, 
 ## 7. Nhạc và xuất
 
 - Nhạc mặc định: đúng bản **Blockbuster Trailer** chủ kênh đã cung cấp, cao trào từ **00:48,08**, từ đầu hook đến hết clip, **gain −20 dB so với file nhạc gốc**. Không nhầm với −20 LUFS hoặc mức của toàn video.
-- File nhạc ngoài không nhúng trong gói công khai. Cấu hình `music.path` bằng bản chủ kênh đang dùng; không thay bản cùng tên rồi áp offset như thể giống nhau. Nếu cần lặp, chọn đoạn theo nhịp và nghe mối nối.
+- File nhạc đã kèm tại `assets/nhac-nen-blockbuster-trailer.m4a`; renderer tự dùng bản này khi không khai báo `music.path`. Có thể chỉ định `music.path` để dùng file khác theo yêu cầu của chủ kênh. Không thay bản cùng tên rồi áp offset như thể giống nhau. Nếu cần lặp, chọn đoạn theo nhịp và nghe mối nối.
 - Giữ lời/nhịp MP3. Có thể chuẩn hóa giọng vừa nghe, tham chiếu −16 LUFS/−1.5 dBTP trước mix; kiểm mix không clip. Không tự thêm SFX/CTA.
 - H.264, yuv420p, AAC 48 kHz, MP4 faststart, 30 fps. Thời lượng theo voice, làm tròn frame; không mất câu cuối hoặc đuôi im lặng dài.
 
